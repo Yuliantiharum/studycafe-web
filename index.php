@@ -1,8 +1,29 @@
-<?php
-include 'koneksi.php';
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
+<?php 
+include 'koneksi.php'; 
+
+// --- PROSES MENYIMPAN DATA BOOKING CEPAT ---
+if (isset($_POST['kirim_booking'])) {
+    // Ambil data dari form inputan user
+    $nama      = mysqli_real_escape_string($koneksi, $_POST['nama']);
+    $email     = mysqli_real_escape_string($koneksi, $_POST['email']);
+    $nohp      = mysqli_real_escape_string($koneksi, $_POST['nohp']);
+    $keperluan = mysqli_real_escape_string($koneksi, $_POST['purpose']);
+    
+    // Set data default sesuai kebutuhan database Kakak
+    $kursi     = "A6"; 
+    $waktu     = "09:00 WIB";
+    $id_user   = 1; 
+    $id_cafe   = 1; 
+
+    // Query untuk memasukkan data ke tabel booking (disesuaikan dengan database.sql)
+    $query = "INSERT INTO booking (id_user, id_cafe, nomor_kursi, slot_waktu, status) 
+              VALUES ('$id_user', '$id_cafe', '$kursi', '$waktu', 'Pending')";
+
+    if (mysqli_query($koneksi, $query)) {
+        echo "<script>alert('Booking Berhasil!'); window.location='index.php';</script>";
+    } else {
+        echo "Error Database: " . mysqli_error($koneksi);
+    }
 }
 ?>
 <!doctype html>
