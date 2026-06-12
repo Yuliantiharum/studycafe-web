@@ -3,57 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyCafe – Temukan Tempat Belajar Idealmu</title>
+  <title>StudyCafe</title>
+  <!-- WAJIB ADA: Script Tailwind ini -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script>
     tailwind.config = { theme: { extend: { colors: { brand: { 500: '#f59e0b' } } } } };
   </script>
-  <style>
-    .page { display: none; }
-    .page.active { display: block; }
-  </style>
 </head>
 <body class="bg-[#0a0a0a] text-white font-sans">
 
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
-        <iconify-icon icon="lucide:coffee" class="text-brand-500 text-2xl"></iconify-icon>
-        <span class="text-xl font-bold">Study<span class="text-brand-500">Cafe</span></span>
-      </div>
-      <div class="space-x-4">
-        <button onclick="showPage('home')" class="hover:text-brand-500">Beranda</button>
-        <button onclick="showPage('catalog')" class="hover:text-brand-500">Katalog</button>
-      </div>
+  <!-- NAVBAR -->
+  <nav class="p-4 border-b border-white/10 flex justify-between">
+    <span class="text-xl font-bold">Study<span class="text-brand-500">Cafe</span></span>
+    <div class="space-x-4">
+      <button>Beranda</button>
+      <button>Katalog</button>
     </div>
   </nav>
 
-  <div id="page-home" class="page active pt-16">
-    
-    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-5xl font-bold">Temukan Tempat Belajar Idealmu</h1>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section class="py-20 text-center">
+    <h1 class="text-5xl font-bold">Temukan Tempat Belajar Idealmu</h1>
+  </section>
 
-    <section class="py-24 px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-bold">Tempat Favorit Mahasiswa</h2>
-        </div>
-    </section>
-    
-    <footer class="py-12 border-t border-white/5 text-center">
-        <p class="text-stone-600 text-sm">&copy; 2026 StudyCafe.</p>
-    </footer>
-  </div>
+  <!-- POPULER -->
+  <section class="py-10 text-center">
+    <h2 class="text-3xl font-bold">Tempat Favorit Mahasiswa</h2>
+  </section>
 
-  <script>
-    function showPage(pageId) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.getElementById('page-' + pageId).classList.add('active');
-    }
-  </script>
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-stone-600">
+    <p>&copy; 2026 StudyCafe.</p>
+  </footer>
+
 </body>
 </html>
     <script>
