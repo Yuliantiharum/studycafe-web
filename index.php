@@ -20,12 +20,6 @@
       <button>Katalog</button>
     </div>
   </nav>
-
-  <!-- FOOTER -->
-  <footer class="py-10 text-center text-stone-600">
-    <p>&copy; 2026 StudyCafe.</p>
-  </footer>
-
 </body>
 </html>
     <script>
