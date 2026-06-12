@@ -2016,29 +2016,6 @@
               .join('')}</div>`
           : '<div class="text-center py-16"><iconify-icon icon="lucide:message-square" class="text-4xl text-stone-700 block mx-auto mb-3"></iconify-icon><p class="text-stone-600">Belum ada review</p></div>';
 
-        adminTab('places');
-      }
-
-      function approveBk(id) {
-        const b = allBooks.find((x) => x.id === id);
-        if (b) {
-          b.status = 'confirmed';
-          const ub = userBooks.find((x) => x.id === id);
-          if (ub) ub.status = 'confirmed';
-          toast(`Booking ${b.cafeName} di-approve!`, 'success');
-          renderAdmin();
-        }
-      }
-      function rejectBk(id) {
-        const idx = allBooks.findIndex((x) => x.id === id);
-        if (idx > -1) {
-          const b = allBooks[idx];
-          allBooks.splice(idx, 1);
-          const ui = userBooks.findIndex((x) => x.id === id);
-          if (ui > -1) userBooks.splice(ui, 1);
-          toast(`Booking ${b.cafeName} ditolak`, 'info');
-          renderAdmin();
-        }
       }
 
       // ===== INIT =====
