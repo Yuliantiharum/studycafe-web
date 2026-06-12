@@ -12,7 +12,7 @@ error_reporting(E_ALL);
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="font-[Inter] bg-gray-100 min-h-screen flex items-center justify-center">
+<body class="font-[Inter] bg-gray-100 min-h-screen">
 
   <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
     <h2 class="text-2xl font-bold mb-6 text-center">Form Booking StudyCafe</h2>
