@@ -1,23 +1,44 @@
-<?php session_start(); ?>
 <!doctype html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyCafe – Temukan Tempat Belajar Idealmu</title>
+  <title>StudyCafe</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-900 min-h-screen">
+<body class="bg-white text-gray-900">
 
-  <main class="flex flex-col items-center justify-center min-h-screen text-center px-4">
-    <h2 class="text-5xl font-extrabold mb-6">Temukan <span class="text-yellow-600">Tempat Belajar</span> Idealmu</h2>
-    <p class="text-gray-600 mb-10 max-w-lg text-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
-    
-    <div class="bg-white p-2 rounded-full shadow-lg border border-gray-200 w-full max-w-lg flex">
-       <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-transparent px-6 outline-none">
-       <button class="bg-yellow-500 text-white px-8 py-3 rounded-full font-bold hover:bg-yellow-600">Cari</button>
-    </div>
+  <!-- Header Tetap -->
+  <header class="p-6 flex justify-between items-center bg-white shadow-sm">
+      <h1 class="text-2xl font-bold text-yellow-600">Study Cafe</h1>
+      <nav class="space-x-6 font-medium">
+        <a href="#">Beranda</a>
+        <a href="#">Katalog</a>
+        <a href="#">Admin</a>
+        <a href="#" class="bg-yellow-500 text-white px-5 py-2 rounded-full font-bold">Login</a>
+      </nav>
+  </header>
+
+  <!-- Konten Utama -->
+  <main class="text-center py-20">
+    <h2 class="text-5xl font-extrabold mb-6">Tempat Favorit Mahasiswa</h2>
+    <p class="text-gray-600 mb-10">Cari kafe & coworking space terbaik untuk belajar.</p>
   </main>
+
+  <!-- Area Daftar Pesanan (Sangat Rapi di Bawah) -->
+  <section class="max-w-2xl mx-auto p-6 bg-gray-50 rounded-lg mt-10 mb-20 border">
+    <h3 class="font-bold text-lg mb-4 text-center">Daftar Booking Masuk</h3>
+    <ul class="text-left">
+      <?php
+        if (file_exists("data_booking.txt")) {
+            $lines = file("data_booking.txt");
+            foreach ($lines as $line) {
+                echo "<li class='border-b py-2'>" . htmlspecialchars($line) . "</li>";
+            }
+        }
+      ?>
+    </ul>
+  </section>
 
 </body>
 </html>
