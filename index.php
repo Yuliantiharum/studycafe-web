@@ -21,16 +21,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="py-20 text-center">
-    <h1 class="text-5xl font-bold">Temukan Tempat Belajar Idealmu</h1>
-  </section>
-
-  <!-- POPULER -->
-  <section class="py-10 text-center">
-    <h2 class="text-3xl font-bold">Tempat Favorit Mahasiswa</h2>
-  </section>
-
   <!-- FOOTER -->
   <footer class="py-10 text-center text-stone-600">
     <p>&copy; 2026 StudyCafe.</p>
