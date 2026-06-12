@@ -7,53 +7,73 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { 500: '#f59e0b' } } } } };
+  </script>
   <style>
     .page { display: none; }
     .page.active { display: block; }
-    /* Masukkan semua style lain yang Kakak punya di sini */
+    /* Tambahkan style scrollbar dan lainnya di sini */
   </style>
 </head>
-
 <body class="bg-[#0a0a0a] text-white font-sans">
 
   <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/10">
-      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
-              <iconify-icon icon="lucide:coffee" class="text-yellow-500 text-2xl"></iconify-icon>
-              <span class="text-xl font-bold">Study<span class="text-yellow-500">Cafe</span></span>
-          </div>
-          <div class="space-x-4">
-              <button onclick="showPage('home')" class="hover:text-yellow-500">Beranda</button>
-              <button onclick="showPage('catalog')" class="hover:text-yellow-500">Katalog</button>
-              <button onclick="showPage('admin')" class="hover:text-yellow-500">Admin</button>
-          </div>
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
+        <iconify-icon icon="lucide:coffee" class="text-brand-500 text-2xl"></iconify-icon>
+        <span class="text-xl font-bold">Study<span class="text-brand-500">Cafe</span></span>
       </div>
+      <div class="space-x-4">
+        <button onclick="showPage('home')" class="hover:text-brand-500">Beranda</button>
+        <button onclick="showPage('catalog')" class="hover:text-brand-500">Katalog</button>
+      </div>
+    </div>
   </nav>
 
-  <div id="page-home" class="page active">
-
+  <div id="page-home" class="page active pt-16">
+    
     <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <h1 class="text-5xl font-bold">Temukan Tempat Belajar Idealmu</h1>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl font-bold">Temukan Tempat Belajar Idealmu</h1>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold">Tempat Favorit Mahasiswa</h2>
+        </div>
     </section>
 
     <section class="py-24 px-4 sm:px-6 border-t border-white/5">
         <div class="max-w-5xl mx-auto text-center">
+            <p class="text-brand-500 text-sm font-semibold uppercase mb-2">Cara Kerja</p>
             <h2 class="text-3xl font-bold mb-16">Semudah 1-2-3</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-neutral-900/50 rounded-2xl">
+                    <h3 class="font-semibold mb-3">Cari & Filter</h3>
+                </div>
+                <div class="p-8 bg-neutral-900/50 rounded-2xl">
+                    <h3 class="font-semibold mb-3">Booking Seat</h3>
+                </div>
+                <div class="p-8 bg-neutral-900/50 rounded-2xl">
+                    <h3 class="font-semibold mb-3">Review & Rating</h3>
+                </div>
             </div>
+        </div>
     </section>
-      <footer class="py-12 border-t border-white/5 text-center">
-        <p class="text-stone-600 text-sm">&copy; 2026 StudyCafe. Semua hak dilindungi.</p>
-      </footer>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-stone-600 text-sm">&copy; 2026 StudyCafe.</p>
+    </footer>
   </div>
 
   <script>
-      function showPage(pageId) {
-          document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-          document.getElementById('page-' + pageId).classList.add('active');
-      }
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + pageId).classList.add('active');
+    }
   </script>
-
 </body>
 </html>
     <script>
