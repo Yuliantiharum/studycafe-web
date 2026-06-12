@@ -12,30 +12,20 @@ error_reporting(E_ALL);
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <style>
-    /* Agar tampilan tidak menggantung di tengah dan melebar dengan benar */
-    body { display: block !important; background-color: #f3f4f6; padding: 20px; }
-    .max-w-md { max-width: 100% !important; width: 90% !important; margin: 20px auto !important; }
-  </style>
 </head>
+<body class="font-[Inter] bg-gray-100">
 
-<body class="font-[Inter]">
-
-  <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
-    <h2 class="text-2xl font-bold mb-6 text-center">Form Booking StudyCafe</h2>
-    <form action="proses_booking.php" method="POST" class="space-y-4">
-      <input type="text" name="nama" placeholder="Nama" required class="w-full p-2 border border-gray-300 rounded">
-      </form>
+  <div class="container mx-auto p-8 max-w-4xl">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold mb-6 text-center">Form Booking StudyCafe</h2>
+      <form action="proses_booking.php" method="POST" class="space-y-4">
+        <input type="text" name="nama" placeholder="Nama" required class="w-full p-3 border border-gray-300 rounded-lg">
+        </form>
+    </div>
   </div>
 
 </body>
 </html>
-
-</body>
-</html>
-
-    />
     <script>
       tailwind.config = {
         theme: {
