@@ -4,22 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StudyCafe</title>
-  <!-- WAJIB ADA: Script Tailwind ini -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brand: { 500: '#f59e0b' } } } } };
-  </script>
 </head>
 <body class="bg-[#0a0a0a] text-white font-sans">
 
   <!-- NAVBAR -->
-  <nav class="p-4 border-b border-white/10 flex justify-between">
-    <span class="text-xl font-bold">Study<span class="text-brand-500">Cafe</span></span>
-    <div class="space-x-4">
+  <nav class="p-6 flex items-center justify-between border-b border-white/10">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-bold">Study <span class="text-yellow-500">Cafe</span></span>
+    </div>
+    <div class="space-x-6">
       <button>Beranda</button>
       <button>Katalog</button>
+      <button>Admin</button>
+      <button class="bg-yellow-500 px-4 py-2 rounded-lg text-black font-bold">Login</button>
     </div>
   </nav>
+
+  <!-- HERO -->
+  <main class="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
+    <h1 class="text-6xl font-bold mb-6">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
+    <p class="text-gray-400 text-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
+  </main>
+
 </body>
 </html>
     <script>
@@ -800,7 +807,7 @@
               <span class="text-brand-500">Cafe</span>
             </span>
           </div>
-          <p class="text-sm text-stone-600">© 2025 StudyCafe — Project Pemrograman Aplikasi Web</p>
+          <p class="text-sm text-stone-600">© 2026 StudyCafe — Project Pemrograman Aplikasi Web</p>
           <div class="text-xs text-stone-700 text-center md:text-right">
             Ai Aminsen • Dino Siagian • Hardiyanti Rahma
             <br />
