@@ -10,26 +10,27 @@ error_reporting(E_ALL);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StudyCafe – Temukan Tempat Belajar Idealmu</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white min-h-screen">
+<body class="font-[Inter] bg-gray-50 text-gray-900 min-h-screen">
 
-  <header class="p-6 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-yellow-500">Study Cafe</h1>
-    <nav class="space-x-6">
-      <a href="#" class="hover:text-yellow-500">Beranda</a>
-      <a href="#" class="hover:text-yellow-500">Katalog</a>
-      <a href="#" class="hover:text-yellow-500">Admin</a>
-      <a href="#" class="bg-yellow-500 text-black px-4 py-2 rounded-lg font-bold">Login</a>
+  <header class="p-6 flex justify-between items-center bg-white shadow-sm">
+    <h1 class="text-2xl font-bold text-yellow-600">Study Cafe</h1>
+    <nav class="space-x-6 font-medium">
+      <a href="#" class="hover:text-yellow-600">Beranda</a>
+      <a href="#" class="hover:text-yellow-600">Katalog</a>
+      <a href="#" class="hover:text-yellow-600">Admin</a>
+      <a href="#" class="bg-yellow-500 text-white px-5 py-2 rounded-full font-bold hover:bg-yellow-600">Login</a>
     </nav>
   </header>
 
   <main class="flex flex-col items-center justify-center mt-20 text-center px-4">
-    <h2 class="text-5xl font-extrabold mb-4">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h2>
-    <p class="text-gray-400 mb-8 max-w-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
+    <h2 class="text-5xl font-extrabold mb-6">Temukan <span class="text-yellow-600">Tempat Belajar</span> Idealmu</h2>
+    <p class="text-gray-600 mb-10 max-w-lg text-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
     
-    <div class="bg-gray-800 p-4 rounded-full w-full max-w-lg flex shadow-lg">
-       <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-transparent px-4 outline-none">
-       <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold">Cari</button>
+    <div class="bg-white p-2 rounded-full shadow-lg border border-gray-200 w-full max-w-lg flex">
+       <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-transparent px-6 outline-none">
+       <button class="bg-yellow-500 text-white px-8 py-3 rounded-full font-bold hover:bg-yellow-600">Cari</button>
     </div>
   </main>
 
