@@ -3,43 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyCafe</title>
+  <title>StudyCafe – Temukan Tempat Belajar Idealmu</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900">
+<body class="font-[Inter] bg-gray-100 min-h-screen flex items-center justify-center">
 
-  <!-- Header -->
-  <header class="p-6 flex justify-between items-center shadow-sm">
-      <h1 class="text-2xl font-bold text-yellow-600">Study Cafe</h1>
-      <nav class="space-x-6 font-medium">
-        <a href="#">Beranda</a>
-        <a href="#">Katalog</a>
-        <a href="#">Admin</a>
-        <a href="#" class="bg-yellow-500 text-white px-5 py-2 rounded-full font-bold">Login</a>
-      </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <main class="text-center py-20">
-    <h2 class="text-5xl font-extrabold mb-6">Tempat Favorit Mahasiswa</h2>
-    <p class="text-gray-600 mb-10">Cari kafe & coworking space terbaik untuk belajar.</p>
-
-    <!-- Tempat Gambar -->
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-        <div class="h-48 bg-gray-300 rounded-xl"></div>
-        <div class="h-48 bg-gray-300 rounded-xl"></div>
-        <div class="h-48 bg-gray-300 rounded-xl"></div>
-    </div>
-  </main>
-
-  <!-- Section "Semudah 1-2-3" -->
-  <section class="text-center py-10">
-    <p class="text-yellow-600 font-bold uppercase tracking-widest text-sm">Cara Kerja</p>
-    <h2 class="text-4xl font-extrabold mt-2">Semudah 1-2-3</h2>
-  </section>
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Form Booking StudyCafe</h2>
+    <form action="proses_booking.php" method="POST" class="space-y-4">
+      <input type="text" name="nama" placeholder="Nama" required
+             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <input type="email" name="email" placeholder="Email" required
+             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <input type="text" name="no_hp" placeholder="No HP" required
+             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <button type="submit"
+              class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">
+        Booking
+      </button>
+    </form>
+  </div>
 
 </body>
 </html>
+
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -2050,21 +2040,6 @@
           renderAdmin();
         }
       }
-      php
-<!-- DAFTAR BOOKING (TAMPIL DI BAWAH) -->
-<div class="mt-10 p-5 bg-gray-50">
-    <h2 class="text-xl font-bold">Daftar Booking Masuk:</h2>
-    <ul class="list-disc pl-5">
-        <?php
-        if (file_exists("data_booking.txt")) {
-            $lines = file("data_booking.txt");
-            foreach ($lines as $line) {
-                echo "<li>" . htmlspecialchars($line) . "</li>";
-            }
-        }
-        ?>
-    </ul>
-</div>
 
       // ===== INIT =====
       document.addEventListener('DOMContentLoaded', () => {
