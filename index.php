@@ -31,25 +31,17 @@
       </div>
   </nav>
 
-  <div id="page-home" class="page active pt-20">
-      <section class="py-24 px-4 text-center">
-          <h1 class="text-5xl font-bold mb-6">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
-          <p class="text-stone-400 mb-10">Cari kafe & coworking space terbaik untuk belajar.</p>
-          
-          <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div class="p-8 bg-neutral-900 border border-white/5 rounded-2xl">
-                  <h3 class="text-lg font-semibold mb-3">Cari & Filter</h3>
-              </div>
-              <div class="p-8 bg-neutral-900 border border-white/5 rounded-2xl">
-                  <h3 class="text-lg font-semibold mb-3">Booking Seat</h3>
-              </div>
-              <div class="p-8 bg-neutral-900 border border-white/5 rounded-2xl">
-                  <h3 class="text-lg font-semibold mb-3">Review & Rating</h3>
-                  <p class="text-stone-500 text-sm">Bagikan pengalaman belajarmu.</p>
-              </div>
-          </div>
-      </section>
+  <div id="page-home" class="page active">
 
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <h1 class="text-5xl font-bold">Temukan Tempat Belajar Idealmu</h1>
+    </section>
+
+    <section class="py-24 px-4 sm:px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-16">Semudah 1-2-3</h2>
+            </div>
+    </section>
       <footer class="py-12 border-t border-white/5 text-center">
         <p class="text-stone-600 text-sm">&copy; 2026 StudyCafe. Semua hak dilindungi.</p>
       </footer>
