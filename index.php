@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body class="bg-[#0a0a0a] text-white">
 
-    <div id="page-home" class="page active">
-        <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                
-                <div class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-full text-yellow-500 text-xs font-semibold uppercase mb-8">
-                    Platform Pencarian Tempat Belajar
-                </div>
+    <div id="page-home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" class="w-full h-full object-cover opacity-40" alt="Background">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 to-[#0a0a0a]"></div>
+        </div>
 
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
-                    Study <span class="text-yellow-500">Cafe</span>
-                </h1>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu
+            </h1>
+            <p class="text-gray-400 text-lg mb-8">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
 
-                <p class="text-gray-400 text-lg mb-8">Cari kafe & coworking space terbaik untuk belajar.</p>
-
-                <div class="max-w-md mx-auto mb-8">
-                    <input type="text" placeholder="Cari lokasi atau nama kafe..." class="w-full p-4 rounded-full text-black focus:outline-none">
-                </div>
+            <div class="max-w-2xl mx-auto bg-[#1c1c1c] p-2 rounded-full border border-gray-800 flex items-center">
+                <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-transparent p-3 text-white focus:outline-none pl-4">
+                <button class="bg-yellow-500 text-black font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">Cari</button>
             </div>
-        </section>
+
+            <div class="flex flex-wrap justify-center gap-2 mt-6">
+                <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">WiFi Kencang</span>
+                <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Tenang</span>
+                <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Banyak Colokan</span>
+                <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Aesthetic</span>
+            </div>
+        </div>
     </div>
 
-    <section class="py-12 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6">Tempat Favorit Mahasiswa</h2>
-            </div>
-    </section>
-
-    <footer class="mt-12 p-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-stone-600 text-sm gap-4">
+    <footer class="p-8 text-center text-stone-600 text-sm">
         <p>&copy; 2025 StudyCafe</p>
         <p>Ai Aminsen • Dino Siagian • Hardiyanti Rahma • Yulianti Harum • Sabil Munthe</p>
     </footer>
