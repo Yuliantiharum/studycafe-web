@@ -19,12 +19,6 @@
       </div>
     </div>
   </nav>
-
-  <main class="pt-32 pb-24 text-center px-4 bg-[#0a0a0a]">
-    <h1 class="text-6xl font-bold mb-4">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
-    <p class="text-gray-400 text-lg max-w-2xl mx-auto">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
-  </main>
-
   <footer class="mt-12 p-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-stone-600 text-sm gap-4">
     <p>&copy; 2025 StudyCafe — Project Pemrograman Aplikasi Web</p>
     <p>Ai Aminsen • Dino Siagian • Hardiyanti Rahma • Yulianti Harum • Sabil Munthe</p>
@@ -633,7 +627,7 @@
     </div>
 
     <!-- ====================== HOME PAGE ====================== -->
-  <div id="page-home" class="page active">
+ <div id="page-home" class="page active">
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     
     <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60"></div>
@@ -645,9 +639,7 @@
 
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
       <div class="anim-fade">
-        <div
-          class="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/20 rounded-full text-brand-400 text-xs font-semibold tracking-wider uppercase mb-8"
-        >
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/20 rounded-full text-brand-400 text-xs font-semibold tracking-wider uppercase mb-8">
           <iconify-icon icon="lucide:sparkles"></iconify-icon>
           Platform Pencarian Tempat Belajar
         </div>
@@ -656,6 +648,12 @@
       <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 anim-slide delay-2">
         Study <span class="text-brand-500">Cafe</span>
       </h1>
+
+      <p class="text-gray-400 text-lg mb-8">Cari kafe & coworking space terbaik untuk belajar.</p>
+      
+      <div class="max-w-md mx-auto">
+        <input type="text" placeholder="Cari lokasi atau nama kafe..." class="w-full p-4 rounded-full text-black">
+      </div>
       </div>
   </section>
 </div>
