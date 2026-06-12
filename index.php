@@ -10,10 +10,8 @@
 
   <!-- NAVBAR -->
   <nav class="p-6 flex items-center justify-between border-b border-white/10">
-    <div class="flex items-center gap-2">
-      <span class="text-2xl font-bold">Study <span class="text-yellow-500">Cafe</span></span>
-    </div>
-    <div class="space-x-6">
+    <div class="text-xl font-bold">Study <span class="text-yellow-500">Cafe</span></div>
+    <div class="space-x-6 flex items-center">
       <button>Beranda</button>
       <button>Katalog</button>
       <button>Admin</button>
@@ -21,11 +19,17 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <main class="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
+  <!-- HERO SECTION -->
+  <main class="py-24 text-center px-4">
     <h1 class="text-6xl font-bold mb-6">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
     <p class="text-gray-400 text-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-24 p-6 border-t border-white/10 flex justify-between text-stone-600 text-sm">
+    <p>&copy; 2025 StudyCafe — Project Pemrograman Aplikasi Web</p>
+    <p>Ai Aminsen • Dino Siagian • Hardiyanti Rahma • Yulianti Harum • Sabil Munthe</p>
+  </footer>
 
 </body>
 </html>
