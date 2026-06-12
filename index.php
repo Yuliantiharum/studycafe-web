@@ -1,8 +1,3 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
 <!doctype html>
 <html lang="id">
 <head>
@@ -14,7 +9,7 @@ error_reporting(E_ALL);
 </head>
 <body class="font-[Inter] bg-white text-gray-900 min-h-screen">
 
-  <header class="p-6 flex justify-between items-center border-b border-gray-100">
+  <header class="p-6 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-yellow-600">Study Cafe</h1>
     <nav class="space-x-6 font-medium">
       <a href="#" class="hover:text-yellow-600">Beranda</a>
