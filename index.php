@@ -1,4 +1,5 @@
 <!doctype html>
+<!doctype html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -7,29 +8,63 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .page { display: none; }
+    .page.active { display: block; }
+    /* Masukkan semua style lain yang Kakak punya di sini */
+  </style>
 </head>
-<body class="font-[Inter] bg-gray-100 min-h-screen flex items-center justify-center">
 
-  <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
-    <h2 class="text-2xl font-bold mb-6 text-center">Form Booking StudyCafe</h2>
-    <form action="proses_booking.php" method="POST" class="space-y-4">
-      <input type="text" name="nama" placeholder="Nama" required
-             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <input type="email" name="email" placeholder="Email" required
-             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <input type="text" name="no_hp" placeholder="No HP" required
-             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <button type="submit"
-              class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">
-        Booking
-      </button>
-    </form>
+<body class="bg-[#0a0a0a] text-white font-sans">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+          <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
+              <iconify-icon icon="lucide:coffee" class="text-yellow-500 text-2xl"></iconify-icon>
+              <span class="text-xl font-bold">Study<span class="text-yellow-500">Cafe</span></span>
+          </div>
+          <div class="space-x-4">
+              <button onclick="showPage('home')" class="hover:text-yellow-500">Beranda</button>
+              <button onclick="showPage('catalog')" class="hover:text-yellow-500">Katalog</button>
+              <button onclick="showPage('admin')" class="hover:text-yellow-500">Admin</button>
+          </div>
+      </div>
+  </nav>
+
+  <div id="page-home" class="page active pt-20">
+      <section class="py-24 px-4 text-center">
+          <h1 class="text-5xl font-bold mb-6">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
+          <p class="text-stone-400 mb-10">Cari kafe & coworking space terbaik untuk belajar.</p>
+          
+          <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="p-8 bg-neutral-900 border border-white/5 rounded-2xl">
+                  <h3 class="text-lg font-semibold mb-3">Cari & Filter</h3>
+              </div>
+              <div class="p-8 bg-neutral-900 border border-white/5 rounded-2xl">
+                  <h3 class="text-lg font-semibold mb-3">Booking Seat</h3>
+              </div>
+              <div class="p-8 bg-neutral-900 border border-white/5 rounded-2xl">
+                  <h3 class="text-lg font-semibold mb-3">Review & Rating</h3>
+                  <p class="text-stone-500 text-sm">Bagikan pengalaman belajarmu.</p>
+              </div>
+          </div>
+      </section>
+
+      <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-stone-600 text-sm">&copy; 2026 StudyCafe. Semua hak dilindungi.</p>
+      </footer>
   </div>
+
+  <script>
+      function showPage(pageId) {
+          document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+          document.getElementById('page-' + pageId).classList.add('active');
+      }
+  </script>
 
 </body>
 </html>
-
-    />
     <script>
       tailwind.config = {
         theme: {
