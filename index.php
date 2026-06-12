@@ -19,9 +19,9 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <main class="py-24 text-center px-4">
-    <h1 class="text-6xl font-bold mb-6">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
+  <!-- HERO SECTION - SESUAI SCREENSHOT -->
+  <main class="py-24 text-center px-4 bg-[#0a0a0a]">
+    <h1 class="text-6xl font-bold mb-4">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
     <p class="text-gray-400 text-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
   </main>
 
