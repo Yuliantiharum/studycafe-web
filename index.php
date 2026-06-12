@@ -5,28 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StudyCafe</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body class="bg-[#0a0a0a] text-white font-sans">
 
-  <!-- NAVBAR -->
-  <nav class="p-6 flex items-center justify-between border-b border-white/10">
-    <div class="text-xl font-bold">Study <span class="text-yellow-500">Cafe</span></div>
-    <div class="space-x-6 flex items-center">
-      <button>Beranda</button>
-      <button>Katalog</button>
-      <button>Admin</button>
-      <button class="bg-yellow-500 px-4 py-2 rounded-lg text-black font-bold">Login</button>
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="text-xl font-bold">Study <span class="text-yellow-500">Cafe</span></div>
+      <div class="space-x-6 flex items-center">
+        <button class="text-stone-400 hover:text-white">Beranda</button>
+        <button class="text-stone-400 hover:text-white">Katalog</button>
+        <button class="bg-yellow-500 px-4 py-2 rounded-lg text-black font-bold text-sm">Login</button>
+      </div>
     </div>
   </nav>
 
-  <!-- HERO SECTION - SESUAI SCREENSHOT -->
-  <main class="py-24 text-center px-4 bg-[#0a0a0a]">
+  <main class="pt-32 pb-24 text-center px-4 bg-[#0a0a0a]">
     <h1 class="text-6xl font-bold mb-4">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
-    <p class="text-gray-400 text-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
+    <p class="text-gray-400 text-lg max-w-2xl mx-auto">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="mt-24 p-6 border-t border-white/10 flex justify-between text-stone-600 text-sm">
+  <footer class="mt-12 p-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-stone-600 text-sm gap-4">
     <p>&copy; 2025 StudyCafe — Project Pemrograman Aplikasi Web</p>
     <p>Ai Aminsen • Dino Siagian • Hardiyanti Rahma • Yulianti Harum • Sabil Munthe</p>
   </footer>
