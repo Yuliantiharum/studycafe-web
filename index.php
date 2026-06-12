@@ -1407,13 +1407,13 @@
       }
 
       // ===== NAVIGATION =====
+     // ===== NAVIGATION =====
       function showPage(p) {
         document.querySelectorAll('.page').forEach((x) => x.classList.remove('active'));
         document.getElementById('page-' + p).classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
         if (p === 'catalog') renderCatalog();
         if (p === 'mybookings') renderMyBookings();
-        if (p === 'admin') renderAdmin();
       }
 
       // ===== MODALS =====
