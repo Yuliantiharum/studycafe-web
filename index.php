@@ -10,19 +10,31 @@ error_reporting(E_ALL);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StudyCafe – Temukan Tempat Belajar Idealmu</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="font-[Inter] bg-gray-100">
+<body class="bg-gray-900 text-white min-h-screen">
 
-  <div class="container mx-auto p-8 max-w-4xl">
-    <div class="bg-white p-8 rounded-lg shadow-md">
-      <h2 class="text-2xl font-bold mb-6 text-center">Form Booking StudyCafe</h2>
+  <header class="p-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-yellow-500">Study Cafe</h1>
+    <nav class="space-x-6">
+      <a href="#" class="hover:text-yellow-500">Beranda</a>
+      <a href="#" class="hover:text-yellow-500">Katalog</a>
+      <a href="#" class="hover:text-yellow-500">Admin</a>
+      <a href="#" class="bg-yellow-500 text-black px-4 py-2 rounded-lg font-bold">Login</a>
+    </nav>
+  </header>
+
+  <main class="flex flex-col items-center justify-center mt-20 text-center px-4">
+    <h2 class="text-5xl font-extrabold mb-4">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h2>
+    <p class="text-gray-400 mb-8 max-w-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
+    
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-md">
+      <h3 class="text-xl font-bold mb-4">Form Booking StudyCafe</h3>
       <form action="proses_booking.php" method="POST" class="space-y-4">
-        <input type="text" name="nama" placeholder="Nama" required class="w-full p-3 border border-gray-300 rounded-lg">
-        </form>
+        <input type="text" name="nama" placeholder="Masukkan Nama" required class="w-full p-3 rounded-lg text-black">
+        <button type="submit" class="w-full bg-yellow-500 text-black py-3 rounded-lg font-bold">Cari Sekarang</button>
+      </form>
     </div>
-  </div>
+  </main>
 
 </body>
 </html>
