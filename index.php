@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyCafe – Temukan Tempat Belajar Idealmu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script>
     tailwind.config = { theme: { extend: { colors: { brand: { 500: '#f59e0b' } } } } };
   </script>
   <style>
     .page { display: none; }
     .page.active { display: block; }
-    /* Tambahkan style scrollbar dan lainnya di sini */
   </style>
 </head>
 <body class="bg-[#0a0a0a] text-white font-sans">
@@ -39,23 +42,7 @@
             <h2 class="text-3xl font-bold">Tempat Favorit Mahasiswa</h2>
         </div>
     </section>
-
-    <section class="py-24 px-4 sm:px-6 border-t border-white/5">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-neutral-900/50 rounded-2xl">
-                    <h3 class="font-semibold mb-3">Cari & Filter</h3>
-                </div>
-                <div class="p-8 bg-neutral-900/50 rounded-2xl">
-                    <h3 class="font-semibold mb-3">Booking Seat</h3>
-                </div>
-                <div class="p-8 bg-neutral-900/50 rounded-2xl">
-                    <h3 class="font-semibold mb-3">Review & Rating</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <footer class="py-12 border-t border-white/5 text-center">
         <p class="text-stone-600 text-sm">&copy; 2026 StudyCafe.</p>
     </footer>
