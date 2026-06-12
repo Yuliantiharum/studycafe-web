@@ -786,15 +786,7 @@
             </div>
         </div>
     </section>
-
-    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30" />
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-7xl font-bold mb-6">Temukan <span class="text-brand-400">Tempat Belajar</span> Idealmu</h1>
-            <p class="text-lg text-stone-400 mb-10">Cari kafe & coworking space terbaik untuk belajar.</p>
-        </div>
-    </section>
-
+       
     </div>
 
       <!-- Footer -->
