@@ -790,56 +790,47 @@
       </section>
 
       <!-- How It Works -->
-      <section class="py-24 px-4 sm:px-6 border-t border-white/5">
+     <div id="page-home" class="page active">
+    
+    <section class="py-24 px-4 sm:px-6 bg-[#0a0a0a]">
         <div class="max-w-5xl mx-auto text-center">
-          <p class="text-brand-400 text-sm font-semibold tracking-wider uppercase mb-2">
-            Cara Kerja
-          </p>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-16">Semudah 1-2-3</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div
-              class="p-8 bg-neutral-900/50 border border-white/5 rounded-2xl hover:border-brand-500/20 transition-colors"
-            >
-              <div
-                class="w-14 h-14 bg-brand-500/10 border border-brand-500/20 rounded-2xl flex items-center justify-center mb-5 mx-auto"
-              >
-                <iconify-icon icon="lucide:search" class="text-brand-400 text-2xl"></iconify-icon>
-              </div>
-              <h3 class="text-lg font-semibold mb-3">Cari & Filter</h3>
-              <p class="text-stone-500 text-sm leading-relaxed">
-                Temukan tempat belajar berdasarkan WiFi, kebisingan, colokan, dan vibe yang kamu
-                mau.
-              </p>
+            <p class="text-brand-400 text-sm font-semibold tracking-wider uppercase mb-2">Cara Kerja</p>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-16">Semudah 1-2-3</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-neutral-900/50 border border-white/5 rounded-2xl">
+                    <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/20 rounded-2xl flex items-center justify-center mb-5 mx-auto">
+                        <iconify-icon icon="lucide:search" class="text-brand-400 text-2xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Cari & Filter</h3>
+                    <p class="text-stone-500 text-sm">Temukan tempat belajar berdasarkan WiFi, kebisingan, colokan, dan vibe yang kamu mau.</p>
+                </div>
+                <div class="p-8 bg-neutral-900/50 border border-white/5 rounded-2xl">
+                    <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/20 rounded-2xl flex items-center justify-center mb-5 mx-auto">
+                        <iconify-icon icon="lucide:armchair" class="text-brand-400 text-2xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Booking Seat</h3>
+                    <p class="text-stone-500 text-sm">Pilih seat dan jam belajar favoritmu, booking real-time tanpa ribet.</p>
+                </div>
+                <div class="p-8 bg-neutral-900/50 border border-white/5 rounded-2xl">
+                    <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/20 rounded-2xl flex items-center justify-center mb-5 mx-auto">
+                        <iconify-icon icon="lucide:star" class="text-brand-400 text-2xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Review & Rating</h3>
+                    <p class="text-stone-500 text-sm">Bagikan pengalamanmu dan bantu mahasiswa lain temukan tempat terbaik.</p>
+                </div>
             </div>
-            <div
-              class="p-8 bg-neutral-900/50 border border-white/5 rounded-2xl hover:border-brand-500/20 transition-colors"
-            >
-              <div
-                class="w-14 h-14 bg-brand-500/10 border border-brand-500/20 rounded-2xl flex items-center justify-center mb-5 mx-auto"
-              >
-                <iconify-icon icon="lucide:armchair" class="text-brand-400 text-2xl"></iconify-icon>
-              </div>
-              <h3 class="text-lg font-semibold mb-3">Booking Seat</h3>
-              <p class="text-stone-500 text-sm leading-relaxed">
-                Pilih seat dan jam belajar favoritmu, booking real-time tanpa ribet.
-              </p>
-            </div>
-            <div
-              class="p-8 bg-neutral-900/50 border border-white/5 rounded-2xl hover:border-brand-500/20 transition-colors"
-            >
-              <div
-                class="w-14 h-14 bg-brand-500/10 border border-brand-500/20 rounded-2xl flex items-center justify-center mb-5 mx-auto"
-              >
-                <iconify-icon icon="lucide:star" class="text-brand-400 text-2xl"></iconify-icon>
-              </div>
-              <h3 class="text-lg font-semibold mb-3">Review & Rating</h3>
-              <p class="text-stone-500 text-sm leading-relaxed">
-                Bagikan pengalamanmu dan bantu mahasiswa lain temukan tempat terbaik.
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
+
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-7xl font-bold mb-6">Temukan <span class="text-brand-400">Tempat Belajar</span> Idealmu</h1>
+            <p class="text-lg text-stone-400 mb-10">Cari kafe & coworking space terbaik untuk belajar.</p>
+        </div>
+    </section>
+
+    </div>
 
       <!-- Footer -->
       <footer class="py-12 px-4 sm:px-6 border-t border-white/5">
