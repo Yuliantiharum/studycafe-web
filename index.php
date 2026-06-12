@@ -47,8 +47,6 @@
 
     <section class="py-24 px-4 sm:px-6 border-t border-white/5">
         <div class="max-w-5xl mx-auto text-center">
-            <p class="text-brand-500 text-sm font-semibold uppercase mb-2">Cara Kerja</p>
-            <h2 class="text-3xl font-bold mb-16">Semudah 1-2-3</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-8 bg-neutral-900/50 rounded-2xl">
                     <h3 class="font-semibold mb-3">Cari & Filter</h3>
