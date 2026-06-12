@@ -2031,6 +2031,21 @@
           renderAdmin();
         }
       }
+      php
+<!-- DAFTAR BOOKING (TAMPIL DI BAWAH) -->
+<div class="mt-10 p-5 bg-gray-50">
+    <h2 class="text-xl font-bold">Daftar Booking Masuk:</h2>
+    <ul class="list-disc pl-5">
+        <?php
+        if (file_exists("data_booking.txt")) {
+            $lines = file("data_booking.txt");
+            foreach ($lines as $line) {
+                echo "<li>" . htmlspecialchars($line) . "</li>";
+            }
+        }
+        ?>
+    </ul>
+</div>
 
       // ===== INIT =====
       document.addEventListener('DOMContentLoaded', () => {
