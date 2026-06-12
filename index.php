@@ -2,6 +2,8 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Cafe</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#0a0a0a] text-white font-sans">
@@ -16,11 +18,11 @@
             <h1 class="text-5xl md:text-7xl font-bold mb-6">
                 Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu
             </h1>
-            <p class="text-gray-400 text-lg mb-8">
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
                 Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.
             </p>
 
-            <div class="max-w-2xl mx-auto bg-[#1c1c1c] p-2 rounded-full border border-gray-800 flex items-center">
+            <div class="max-w-xl mx-auto bg-[#1c1c1c] p-2 rounded-full border border-gray-800 flex items-center mb-8">
                 <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-transparent p-3 text-white focus:outline-none pl-4">
                 <button class="bg-yellow-500 text-black font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">Cari</button>
             </div>
