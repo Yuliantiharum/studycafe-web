@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
-<body class="bg-[#0a0a0a] text-white">
+<body class="bg-[#0a0a0a] text-white font-sans">
 
-    <div id="page-home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" class="w-full h-full object-cover opacity-40" alt="Background">
             <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 to-[#0a0a0a]"></div>
@@ -17,26 +16,16 @@
             <h1 class="text-5xl md:text-7xl font-bold mb-6">
                 Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu
             </h1>
-            <p class="text-gray-400 text-lg mb-8">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
+            <p class="text-gray-400 text-lg mb-8">
+                Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.
+            </p>
 
             <div class="max-w-2xl mx-auto bg-[#1c1c1c] p-2 rounded-full border border-gray-800 flex items-center">
                 <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-transparent p-3 text-white focus:outline-none pl-4">
                 <button class="bg-yellow-500 text-black font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">Cari</button>
             </div>
-
-            <div class="flex flex-wrap justify-center gap-2 mt-6">
-                <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">WiFi Kencang</span>
-                <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Tenang</span>
-                <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Banyak Colokan</span>
-                <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Aesthetic</span>
-            </div>
         </div>
-    </div>
-
-    <footer class="p-8 text-center text-stone-600 text-sm">
-        <p>&copy; 2025 StudyCafe</p>
-        <p>Ai Aminsen • Dino Siagian • Hardiyanti Rahma • Yulianti Harum • Sabil Munthe</p>
-    </footer>
+    </section>
 
 </body>
 </html>
