@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body class="bg-[#0a0a0a] text-white">
 
     <div id="page-home" class="page active">
-      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60"></div>
-        
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 class="text-6xl font-bold mb-4">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
-          <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-8">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, dan vibe aesthetic.</p>
-          
-          <div class="max-w-md mx-auto mb-8">
-            <input type="text" placeholder="Cari lokasi..." class="w-full p-4 rounded-full text-black">
-          </div>
-        </div>
-      </section>
+        <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-full text-yellow-500 text-xs font-semibold uppercase mb-8">
+                    Platform Pencarian Tempat Belajar
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+                    Study <span class="text-yellow-500">Cafe</span>
+                </h1>
+
+                <p class="text-gray-400 text-lg mb-8">Cari kafe & coworking space terbaik untuk belajar.</p>
+
+                <div class="max-w-md mx-auto mb-8">
+                    <input type="text" placeholder="Cari lokasi atau nama kafe..." class="w-full p-4 rounded-full text-black focus:outline-none">
+                </div>
+            </div>
+        </section>
     </div>
 
-    <section class="py-12 px-4 bg-[#0a0a0a]">
-        <div class="max-w-4xl mx-auto p-8 bg-neutral-900/50 border border-white/5 rounded-2xl">
-            <h3 class="text-lg font-semibold mb-3">Cari & Filter</h3>
-            <p class="text-stone-500 text-sm">Temukan tempat belajar berdasarkan WiFi, kebisingan, colokan, dan vibe yang kamu mau.</p>
-        </div>
+    <section class="py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6">Tempat Favorit Mahasiswa</h2>
+            </div>
     </section>
 
-    <footer class="mt-12 p-8 border-t border-white/10 text-center text-stone-600 text-sm">
+    <footer class="mt-12 p-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-stone-600 text-sm gap-4">
         <p>&copy; 2025 StudyCafe</p>
         <p>Ai Aminsen • Dino Siagian • Hardiyanti Rahma • Yulianti Harum • Sabil Munthe</p>
     </footer>
