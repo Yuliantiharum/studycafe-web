@@ -1,28 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyCafe</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
-<body class="bg-[#0a0a0a] text-white font-sans">
+<body class="bg-[#0a0a0a] text-white">
 
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <div class="text-xl font-bold">Study <span class="text-yellow-500">Cafe</span></div>
-      <div class="space-x-6 flex items-center">
-        <button class="text-stone-400 hover:text-white">Beranda</button>
-        <button class="text-stone-400 hover:text-white">Katalog</button>
-        <button class="bg-yellow-500 px-4 py-2 rounded-lg text-black font-bold text-sm">Login</button>
-      </div>
+    <div id="page-home" class="page active">
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 class="text-6xl font-bold mb-4">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h1>
+          <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-8">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, dan vibe aesthetic.</p>
+          
+          <div class="max-w-md mx-auto mb-8">
+            <input type="text" placeholder="Cari lokasi..." class="w-full p-4 rounded-full text-black">
+          </div>
+        </div>
+      </section>
     </div>
-  </nav>
-  <footer class="mt-12 p-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-stone-600 text-sm gap-4">
-    <p>&copy; 2025 StudyCafe — Project Pemrograman Aplikasi Web</p>
-    <p>Ai Aminsen • Dino Siagian • Hardiyanti Rahma • Yulianti Harum • Sabil Munthe</p>
-  </footer>
+
+    <section class="py-12 px-4 bg-[#0a0a0a]">
+        <div class="max-w-4xl mx-auto p-8 bg-neutral-900/50 border border-white/5 rounded-2xl">
+            <h3 class="text-lg font-semibold mb-3">Cari & Filter</h3>
+            <p class="text-stone-500 text-sm">Temukan tempat belajar berdasarkan WiFi, kebisingan, colokan, dan vibe yang kamu mau.</p>
+        </div>
+    </section>
+
+    <footer class="mt-12 p-8 border-t border-white/10 text-center text-stone-600 text-sm">
+        <p>&copy; 2025 StudyCafe</p>
+        <p>Ai Aminsen • Dino Siagian • Hardiyanti Rahma • Yulianti Harum • Sabil Munthe</p>
+    </footer>
 
 </body>
 </html>
@@ -627,34 +637,32 @@
     </div>
 
     <!-- ====================== HOME PAGE ====================== -->
- <div id="page-home" class="page active">
+<div id="page-home" class="page active">
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    
     <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60"></div>
-    
-    <div 
-      class="absolute inset-0 opacity-[0.03]" 
-      style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');">
-    </div>
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
 
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-      <div class="anim-fade">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/20 rounded-full text-brand-400 text-xs font-semibold tracking-wider uppercase mb-8">
-          <iconify-icon icon="lucide:sparkles"></iconify-icon>
-          Platform Pencarian Tempat Belajar
-        </div>
-      </div>
-      
-      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 anim-slide delay-2">
-        Study <span class="text-brand-500">Cafe</span>
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+        Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu
       </h1>
-
-      <p class="text-gray-400 text-lg mb-8">Cari kafe & coworking space terbaik untuk belajar.</p>
       
-      <div class="max-w-md mx-auto">
-        <input type="text" placeholder="Cari lokasi atau nama kafe..." class="w-full p-4 rounded-full text-black">
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+        Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.
+      </p>
+
+      <div class="relative max-w-2xl mx-auto mb-8">
+        <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-[#1c1c1c] border border-gray-800 text-white rounded-full py-4 pl-6 pr-32 focus:outline-none focus:border-brand-500">
+        <button class="absolute right-2 top-2 bg-brand-500 text-black font-bold px-6 py-2 rounded-full hover:bg-brand-400">Cari</button>
       </div>
+
+      <div class="flex flex-wrap justify-center gap-2">
+        <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">WiFi Kencang</span>
+        <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Tenang</span>
+        <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Banyak Colokan</span>
+        <span class="px-4 py-2 bg-[#1c1c1c] border border-gray-800 rounded-full text-sm">Aesthetic</span>
       </div>
+    </div>
   </section>
 </div>
             class="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6 anim-fade delay-1"
