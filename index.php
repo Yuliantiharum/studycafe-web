@@ -1,7 +1,8 @@
-<?php):
+<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+?>
 <!doctype html>
 <html lang="id">
 <head>
@@ -11,24 +12,25 @@ error_reporting(E_ALL);
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Agar tampilan tidak menggantung di tengah dan melebar dengan benar */
+    body { display: block !important; background-color: #f3f4f6; padding: 20px; }
+    .max-w-md { max-width: 100% !important; width: 90% !important; margin: 20px auto !important; }
+  </style>
 </head>
-<body class="font-[Inter] bg-gray-100 min-h-screen">
+
+<body class="font-[Inter]">
 
   <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
     <h2 class="text-2xl font-bold mb-6 text-center">Form Booking StudyCafe</h2>
     <form action="proses_booking.php" method="POST" class="space-y-4">
-      <input type="text" name="nama" placeholder="Nama" required
-             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <input type="email" name="email" placeholder="Email" required
-             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <input type="text" name="no_hp" placeholder="No HP" required
-             class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <button type="submit"
-              class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">
-        Booking
-      </button>
-    </form>
+      <input type="text" name="nama" placeholder="Nama" required class="w-full p-2 border border-gray-300 rounded">
+      </form>
   </div>
+
+</body>
+</html>
 
 </body>
 </html>
