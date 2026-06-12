@@ -12,9 +12,9 @@ error_reporting(E_ALL);
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="font-[Inter] bg-gray-50 text-gray-900 min-h-screen">
+<body class="font-[Inter] bg-white text-gray-900 min-h-screen">
 
-  <header class="p-6 flex justify-between items-center bg-white shadow-sm">
+  <header class="p-6 flex justify-between items-center border-b border-gray-100">
     <h1 class="text-2xl font-bold text-yellow-600">Study Cafe</h1>
     <nav class="space-x-6 font-medium">
       <a href="#" class="hover:text-yellow-600">Beranda</a>
