@@ -8,8 +8,8 @@
 </head>
 <body class="bg-white text-gray-900">
 
-  <!-- Header Tetap -->
-  <header class="p-6 flex justify-between items-center bg-white shadow-sm">
+  <!-- Header -->
+  <header class="p-6 flex justify-between items-center shadow-sm">
       <h1 class="text-2xl font-bold text-yellow-600">Study Cafe</h1>
       <nav class="space-x-6 font-medium">
         <a href="#">Beranda</a>
@@ -19,25 +19,23 @@
       </nav>
   </header>
 
-  <!-- Konten Utama -->
+  <!-- Hero Section -->
   <main class="text-center py-20">
     <h2 class="text-5xl font-extrabold mb-6">Tempat Favorit Mahasiswa</h2>
     <p class="text-gray-600 mb-10">Cari kafe & coworking space terbaik untuk belajar.</p>
+
+    <!-- Tempat Gambar -->
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+        <div class="h-48 bg-gray-300 rounded-xl"></div>
+        <div class="h-48 bg-gray-300 rounded-xl"></div>
+        <div class="h-48 bg-gray-300 rounded-xl"></div>
+    </div>
   </main>
 
-  <!-- Area Daftar Pesanan (Sangat Rapi di Bawah) -->
-  <section class="max-w-2xl mx-auto p-6 bg-gray-50 rounded-lg mt-10 mb-20 border">
-    <h3 class="font-bold text-lg mb-4 text-center">Daftar Booking Masuk</h3>
-    <ul class="text-left">
-      <?php
-        if (file_exists("data_booking.txt")) {
-            $lines = file("data_booking.txt");
-            foreach ($lines as $line) {
-                echo "<li class='border-b py-2'>" . htmlspecialchars($line) . "</li>";
-            }
-        }
-      ?>
-    </ul>
+  <!-- Section "Semudah 1-2-3" -->
+  <section class="text-center py-10">
+    <p class="text-yellow-600 font-bold uppercase tracking-widest text-sm">Cara Kerja</p>
+    <h2 class="text-4xl font-extrabold mt-2">Semudah 1-2-3</h2>
   </section>
 
 </body>
