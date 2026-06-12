@@ -1,18 +1,14 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Menghubungkan ke Database MySQL Railway Asli Anda
-$host = "junction.proxy.rlwy.net"; 
-$user = "root";
-$pass = "TeSpvoLeOxKHbnBllMBTGiUoWKWJqdxs"; 
-$db   = "railway";
-$port = "51433"; 
+// Mengambil data otomatis dari variabel database Railway Anda
+$host = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
+$user = getenv('MYSQLUSER') ?: 'root';
+$pass = getenv('MYSQLPASSWORD') ?: 'TeSpvoLeOxKHbnBllMBTGiUoWKWJqdxs';
+$db   = getenv('MYSQL_DATABASE') ?: 'railway';
+$port = getenv('MYSQLPORT') ?: '3306';
 
 $koneksi = mysqli_connect($host, $user, $pass, $db, $port);
 
 if (!$koneksi) {
-    die("Koneksi ke Database Railway Gagal: " . mysqli_connect_error());
+    die("Koneksi database gagal: " . mysqli_connect_error());
 }
 ?>
