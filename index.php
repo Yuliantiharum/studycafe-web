@@ -633,31 +633,32 @@
     </div>
 
     <!-- ====================== HOME PAGE ====================== -->
-    <div id="page-home" class="page active">
-      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80"
-          class="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
+  <div id="page-home" class="page active">
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60"></div>
+    
+    <div 
+      class="absolute inset-0 opacity-[0.03]" 
+      style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');">
+    </div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div class="anim-fade">
         <div
-          class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-[#0a0a0a]/30 to-[#0a0a0a]"
-        ></div>
-        <div
-          class="absolute inset-0 opacity-[0.03]"
-          style="
-            background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');
-          "
-        ></div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div class="anim-fade">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/20 rounded-full text-brand-400 text-xs font-semibold tracking-wider uppercase mb-8"
-            >
-              <iconify-icon icon="lucide:sparkles"></iconify-icon>
-              Platform Pencarian Tempat Belajar
-            </div>
-          </div>
-          <h1
+          class="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/20 rounded-full text-brand-400 text-xs font-semibold tracking-wider uppercase mb-8"
+        >
+          <iconify-icon icon="lucide:sparkles"></iconify-icon>
+          Platform Pencarian Tempat Belajar
+        </div>
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 anim-slide delay-2">
+        Study <span class="text-brand-500">Cafe</span>
+      </h1>
+      </div>
+  </section>
+</div>
             class="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6 anim-fade delay-1"
           >
             Temukan
