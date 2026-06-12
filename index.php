@@ -2,32 +2,9 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Cafe</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#0a0a0a] text-white font-sans">
-
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" class="w-full h-full object-cover opacity-40" alt="Background">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 to-[#0a0a0a]"></div>
-        </div>
-
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu
-            </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
-                Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.
-            </p>
-
-            <div class="max-w-xl mx-auto bg-[#1c1c1c] p-2 rounded-full border border-gray-800 flex items-center mb-8">
-                <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-transparent p-3 text-white focus:outline-none pl-4">
-                <button class="bg-yellow-500 text-black font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">Cari</button>
-            </div>
-        </div>
-    </section>
 
 </body>
 </html>
@@ -1038,7 +1015,11 @@
           </div>
           <div class="flex gap-1 mb-6 border-b border-white/10">
             <button
-              
+              onclick="adminTab('places')"
+              class="atab px-4 py-3 text-sm font-medium transition-colors border-b-2"
+              data-t="places"
+            >
+              Manajemen Tempat
             </button>
             <button
               onclick="adminTab('bookings')"
@@ -1405,13 +1386,13 @@
       }
 
       // ===== NAVIGATION =====
-     // ===== NAVIGATION =====
       function showPage(p) {
         document.querySelectorAll('.page').forEach((x) => x.classList.remove('active'));
         document.getElementById('page-' + p).classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
         if (p === 'catalog') renderCatalog();
         if (p === 'mybookings') renderMyBookings();
+        if (p === 'admin') renderAdmin();
       }
 
       // ===== MODALS =====
@@ -1954,6 +1935,34 @@
           renderMyBookings();
         }
       }
+
+      // ===== ADMIN =====
+      function adminTab(t) {
+        document.querySelectorAll('.apanel').forEach((p) => p.classList.add('hidden'));
+        document.getElementById('ap-' + t).classList.remove('hidden');
+        document.querySelectorAll('.atab').forEach((b) => {
+          b.classList.remove('text-brand-400', 'border-brand-500');
+          b.classList.add('text-stone-500', 'border-transparent');
+        });
+        const btn = document.querySelector(`.atab[data-t="${t}"]`);
+        btn.classList.remove('text-stone-500', 'border-transparent');
+        btn.classList.add('text-brand-400', 'border-brand-500');
+      }
+
+      function renderAdmin() {
+        document.getElementById('s-places').textContent = cafes.length;
+        document.getElementById('s-books').textContent = allBooks.length;
+        const tr = cafes.reduce((s, c) => s + c.reviews.length, 0);
+        document.getElementById('s-revs').textContent = tr;
+        const ar = cafes.reduce((s, c) => s + c.rating, 0) / cafes.length;
+        document.getElementById('s-avg').textContent = ar.toFixed(1);
+
+        // Places
+        document.getElementById('ap-places').innerHTML =
+          `<div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="border-b border-white/10 text-left">
+    <th class="py-3 px-4 text-stone-500 font-medium">Nama</th><th class="py-3 px-4 text-stone-500 font-medium">Lokasi</th><th class="py-3 px-4 text-stone-500 font-medium">Rating</th><th class="py-3 px-4 text-stone-500 font-medium">Harga</th><th class="py-3 px-4 text-stone-500 font-medium">Seat</th><th class="py-3 px-4 text-stone-500 font-medium">Status</th></tr></thead><tbody>
+    ${cafes.map((c) => `<tr class="border-b border-white/5 hover:bg-white/[0.02]"><td class="py-3 px-4 font-medium">${c.name}</td><td class="py-3 px-4 text-stone-400">${c.loc}</td><td class="py-3 px-4"><span class="text-brand-400">★</span> ${c.rating}</td><td class="py-3 px-4 text-stone-400">${fmtP(c.price)}</td><td class="py-3 px-4 text-stone-400">${c.seats}</td><td class="py-3 px-4"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-green-500/10 text-green-400 border border-green-500/20"><iconify-icon icon="lucide:check-circle" class="text-[10px]"></iconify-icon>Active</span></td></tr>`).join('')}</tbody></table></div>`;
+
         // Bookings
         document.getElementById('ap-bookings').innerHTML = allBooks.length
           ? `<div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="border-b border-white/10 text-left">
@@ -1986,6 +1995,29 @@
               .join('')}</div>`
           : '<div class="text-center py-16"><iconify-icon icon="lucide:message-square" class="text-4xl text-stone-700 block mx-auto mb-3"></iconify-icon><p class="text-stone-600">Belum ada review</p></div>';
 
+        adminTab('places');
+      }
+
+      function approveBk(id) {
+        const b = allBooks.find((x) => x.id === id);
+        if (b) {
+          b.status = 'confirmed';
+          const ub = userBooks.find((x) => x.id === id);
+          if (ub) ub.status = 'confirmed';
+          toast(`Booking ${b.cafeName} di-approve!`, 'success');
+          renderAdmin();
+        }
+      }
+      function rejectBk(id) {
+        const idx = allBooks.findIndex((x) => x.id === id);
+        if (idx > -1) {
+          const b = allBooks[idx];
+          allBooks.splice(idx, 1);
+          const ui = userBooks.findIndex((x) => x.id === id);
+          if (ui > -1) userBooks.splice(ui, 1);
+          toast(`Booking ${b.cafeName} ditolak`, 'info');
+          renderAdmin();
+        }
       }
 
       // ===== INIT =====
