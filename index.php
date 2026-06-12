@@ -1038,11 +1038,7 @@
           </div>
           <div class="flex gap-1 mb-6 border-b border-white/10">
             <button
-              onclick="adminTab('places')"
-              class="atab px-4 py-3 text-sm font-medium transition-colors border-b-2"
-              data-t="places"
-            >
-              Manajemen Tempat
+              
             </button>
             <button
               onclick="adminTab('bookings')"
@@ -1958,34 +1954,6 @@
           renderMyBookings();
         }
       }
-
-      // ===== ADMIN =====
-      function adminTab(t) {
-        document.querySelectorAll('.apanel').forEach((p) => p.classList.add('hidden'));
-        document.getElementById('ap-' + t).classList.remove('hidden');
-        document.querySelectorAll('.atab').forEach((b) => {
-          b.classList.remove('text-brand-400', 'border-brand-500');
-          b.classList.add('text-stone-500', 'border-transparent');
-        });
-        const btn = document.querySelector(`.atab[data-t="${t}"]`);
-        btn.classList.remove('text-stone-500', 'border-transparent');
-        btn.classList.add('text-brand-400', 'border-brand-500');
-      }
-
-      function renderAdmin() {
-        document.getElementById('s-places').textContent = cafes.length;
-        document.getElementById('s-books').textContent = allBooks.length;
-        const tr = cafes.reduce((s, c) => s + c.reviews.length, 0);
-        document.getElementById('s-revs').textContent = tr;
-        const ar = cafes.reduce((s, c) => s + c.rating, 0) / cafes.length;
-        document.getElementById('s-avg').textContent = ar.toFixed(1);
-
-        // Places
-        document.getElementById('ap-places').innerHTML =
-          `<div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="border-b border-white/10 text-left">
-    <th class="py-3 px-4 text-stone-500 font-medium">Nama</th><th class="py-3 px-4 text-stone-500 font-medium">Lokasi</th><th class="py-3 px-4 text-stone-500 font-medium">Rating</th><th class="py-3 px-4 text-stone-500 font-medium">Harga</th><th class="py-3 px-4 text-stone-500 font-medium">Seat</th><th class="py-3 px-4 text-stone-500 font-medium">Status</th></tr></thead><tbody>
-    ${cafes.map((c) => `<tr class="border-b border-white/5 hover:bg-white/[0.02]"><td class="py-3 px-4 font-medium">${c.name}</td><td class="py-3 px-4 text-stone-400">${c.loc}</td><td class="py-3 px-4"><span class="text-brand-400">★</span> ${c.rating}</td><td class="py-3 px-4 text-stone-400">${fmtP(c.price)}</td><td class="py-3 px-4 text-stone-400">${c.seats}</td><td class="py-3 px-4"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-green-500/10 text-green-400 border border-green-500/20"><iconify-icon icon="lucide:check-circle" class="text-[10px]"></iconify-icon>Active</span></td></tr>`).join('')}</tbody></table></div>`;
-
         // Bookings
         document.getElementById('ap-bookings').innerHTML = allBooks.length
           ? `<div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="border-b border-white/10 text-left">
