@@ -5,21 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StudyCafe – Temukan Tempat Belajar Idealmu</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="font-[Inter] bg-white text-gray-900 min-h-screen">
+<body class="bg-white text-gray-900 min-h-screen">
 
-  <header class="p-6 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-yellow-600">Study Cafe</h1>
-    <nav class="space-x-6 font-medium">
-      <a href="#" class="hover:text-yellow-600">Beranda</a>
-      <a href="#" class="hover:text-yellow-600">Katalog</a>
-      <a href="#" class="hover:text-yellow-600">Admin</a>
-      <a href="#" class="bg-yellow-500 text-white px-5 py-2 rounded-full font-bold hover:bg-yellow-600">Login</a>
-    </nav>
-  </header>
-
-  <main class="flex flex-col items-center justify-center mt-20 text-center px-4">
+  <main class="flex flex-col items-center justify-center min-h-screen text-center px-4">
     <h2 class="text-5xl font-extrabold mb-6">Temukan <span class="text-yellow-600">Tempat Belajar</span> Idealmu</h2>
     <p class="text-gray-600 mb-10 max-w-lg text-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
     
