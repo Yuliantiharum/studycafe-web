@@ -27,12 +27,9 @@ error_reporting(E_ALL);
     <h2 class="text-5xl font-extrabold mb-4">Temukan <span class="text-yellow-500">Tempat Belajar</span> Idealmu</h2>
     <p class="text-gray-400 mb-8 max-w-lg">Cari kafe & coworking space terbaik untuk belajar berdasarkan WiFi, colokan, tingkat kebisingan, dan vibe aesthetic.</p>
     
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-md">
-      <h3 class="text-xl font-bold mb-4">Form Booking StudyCafe</h3>
-      <form action="proses_booking.php" method="POST" class="space-y-4">
-        <input type="text" name="nama" placeholder="Masukkan Nama" required class="w-full p-3 rounded-lg text-black">
-        <button type="submit" class="w-full bg-yellow-500 text-black py-3 rounded-lg font-bold">Cari Sekarang</button>
-      </form>
+    <div class="bg-gray-800 p-4 rounded-full w-full max-w-lg flex shadow-lg">
+       <input type="text" placeholder="Cari nama kafe atau lokasi..." class="w-full bg-transparent px-4 outline-none">
+       <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold">Cari</button>
     </div>
   </main>
 
