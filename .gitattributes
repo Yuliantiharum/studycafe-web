@@ -1,4 +1,3 @@
-# Mengabaikan file yang bukan kode dari statistik GitHub
 *.txt linguist-documentation
 *.md linguist-documentation
 *.json linguist-vendored
